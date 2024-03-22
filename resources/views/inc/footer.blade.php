@@ -1,8 +1,8 @@
-<footer class="text-gray-600 body-font bg-white dark:bg-gray-900 pt-2">
-    <div class="container px-5 py-4 mx-auto flex items-center sm:flex-row flex-col ">
+<footer class="text-gray-600 body-font bg-white dark:bg-gray-900  pt-2">
+    <div class="px-5 py-4 mx-auto flex items-center sm:flex-row flex-col shadow">
       <div class="flex flex-row">
         <a class="inline-flex title-font font-medium items-center md:justify-start justify-center text-gray-900 dark:text-white">
-          <img alt="content" class="object-scale-down w-12 h-12 mt-2" src="{{url ('assets\c2_logo.ico')}}">
+          <img alt="content" class="object-scale-down w-12 h-12 mt-2" src="{{url ('public/assets/c2_logo.ico')}}">
         </a>
       </div>
       <span class="inline-flex sm:ml-auto sm:mt-0 mt-4  ">

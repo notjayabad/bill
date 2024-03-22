@@ -18,7 +18,9 @@ use App\Http\Controllers\HomeController;
 Route::get('/', [HomeController::class, 'index']);
 Route::resource('/', 'HomeController');
 
-Route::get('/test', [HomeController::class, 'test_index']);
-Route::get('/query', [HomeController::class, 'test_query']);
+
 
 Route::get('/search', [HomeController::class, 'search']);
+Route::get('/view', [HomeController::class, 'show']);
+
+//Auth::routes();

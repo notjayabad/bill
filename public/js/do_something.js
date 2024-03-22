@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    $('#route_code').inputmask('***-****-*');
+    $('#route_codes').inputmask('***-****-**');
     
 $( 'body' ).on( "click", '#submit_button', function() {
     // gets value of month and route code

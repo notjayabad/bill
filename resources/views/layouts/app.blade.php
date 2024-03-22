@@ -27,12 +27,12 @@
 
         <title>CASURECO II</title>      
     </head>
-    <body>
-        <div class="flex-center position-ref h-screen bg:-gray-100 dark:bg-gray-900 ">
+    <body class="bg-white dark:bg-gray-900">
+        <div class="flex-center position-ref h-screen bg-white dark:bg-gray-900 ">
             @include('inc.navbar')
+            @include('inc.messages')
             @yield('content')
             @include('inc.footer')
         </div>
     </body>
-
 </html>
