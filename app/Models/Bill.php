@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Bill extends Model
 {
+    protected $connection = 'mysql';
     public $primaryKey = 'id_bill_inquiry';
     
     protected $table = 'bill_inquiry';
