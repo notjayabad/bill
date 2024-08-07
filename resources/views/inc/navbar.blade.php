@@ -3,6 +3,10 @@
       <div class="container flex flex-wrap justify-between items-center mx-auto">
         <a href="{{url ("/")}}" class="flex title-font font-medium items-center text-gray-900 dark:text-white md:mb-0">
           <img alt="content" class="object-scale-down w-12 h-12 mt-2" src="{{url ('public/assets/c2_logo.ico')}}" loading="lazy">
+          @if(env('APP_ENV') == 'production')
+          @else
+          <p>{{env('APP_ENV')}}</p>
+          @endif
         </a>
       <div class="flex items-center md:order-2">
         <button id="theme-toggle" aria-label="Light Mode" type="button" class="flex text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5">

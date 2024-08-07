@@ -19,7 +19,7 @@
 
         <link rel="icon" href="{{url ('assets/img/c2_logo.ico')}}" type="image/x-icon">
 
-        <title>CASURECO II</title>      
+        <title>CASURECO II -  Bill Inquiry</title>      
     </head>
     <body class="bg-white dark:bg-gray-900">
         <div class="flex-center position-ref h-screen bg-white dark:bg-gray-900 ">
