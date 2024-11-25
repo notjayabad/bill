@@ -32,4 +32,8 @@ Route::get('/test', function () {
 
 Route::post('/upload-sql', [SQLUploadsController::class, 'upload'])->name('upload.sql');
 
+Route::get('/503', function () {
+    return view('errors/503');
+});
+
 //Auth::routes();

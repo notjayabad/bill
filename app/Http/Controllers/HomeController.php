@@ -17,8 +17,9 @@ class HomeController extends Controller
     {
         $rates = Rate::orderByDesc('year')->orderByDesc('month')->first();
         $bill_query = 0; // Initialize bill query to 0
+        $date = $this->show_as_of_date();
 
-        return view('index', compact('rates', 'bill_query'));
+        return view('index', compact('rates', 'bill_query', 'date'));
     }
 
     /**
@@ -34,6 +35,9 @@ class HomeController extends Controller
             'acct_no' => 'required|numeric',
             'route_code' => 'required|alpha_num|min:3',
         ]);
+
+        $date = $this->show_as_of_date();
+
 
         // Sanitize input values
         $acct_no = preg_replace("/[^0-9]/", "", $request->input('acct_no'));
@@ -54,7 +58,7 @@ class HomeController extends Controller
         $payment = $bill_query ? $this->getPayment($bill_query->due_date, $bill_query->amount_before_due, $bill_query->amount_after_due) : null;
         $total_bill = $bill_query ? $bill_query->penalty + $bill_query->arrears + $bill_query->current_power_bill : null;
 
-        return view('index', compact('bill_query', 'rates', 'bill_month', 'payment', 'total_bill'));
+        return view('index', compact('bill_query', 'rates', 'bill_month', 'payment', 'total_bill', 'date'));
     }
 
     /**
@@ -83,5 +87,10 @@ class HomeController extends Controller
     public function show($id)
     {
         return view('bill/show');
+    }
+
+    public function show_as_of_date() {
+        $as_of_date = Bill::orderBy('reading_date', 'desc')->first();
+        return strtotime(substr($as_of_date->reading_date,0,10));
     }
 }

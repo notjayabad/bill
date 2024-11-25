@@ -18,7 +18,7 @@
               <!-- Modal body -->
               <div class="p-4 md:p-5 space-y-4">
                   <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-                    To our valued Member Consumer-Owners, by utilizing this Online Bill Inquiry module, you consent to the collection of the following information: Account Number, and Route Code. These information will be processed electronically to show you your total payable amount, and these details will not be stored or retained. If you have queries regarding the way we process your given information, please contact dpo@casureco2.com.ph.
+                    To our valued Member Consumer-Owners, by utilizing this Online Bill Inquiry module, you consent to the collection of the following information: Account Number, and Route Code. These information will be processed electronically to show you your total payable amount, and these details will not be stored or retained. If you have queries regarding the way we process your given information, please contact dpo.casureco2@gmail.com.
                   </p>
 
               </div>
