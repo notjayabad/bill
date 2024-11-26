@@ -40,7 +40,8 @@
 
 <!-- Rates Section -->
 @include('inc.rates')
-@include('inc.payment_partners')
+<!-- Card -->
+@include('inc.card')
 
 
   

@@ -91,12 +91,13 @@ class HomeController extends Controller
 
     public function show_as_of_date() {
         $as_of_date = Bill::select('reading_date')
-        ->distinct()
-        ->where('bill_status', 0)
-        ->where('bill_month', 'like', '2024%')
+        ->distinct('reading_date')
+        ->where([
+            ['bill_status', '=', 0],
+            ['bill_month', 'like', date('Y') . '%'],
+        ])
         ->orderByDesc('reading_date')
-        ->limit(1)
-        ->first();
-        return strtotime(substr($as_of_date->reading_date,0,10));
+        ->value('reading_date');
+        return strtotime(substr($as_of_date,0,10));
     }
 }
